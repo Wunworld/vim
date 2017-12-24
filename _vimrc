@@ -200,8 +200,8 @@ set smarttab                                          "指定按一次backspace�
 "set foldmethod=marker                                 "marker 折叠方式  
 
 set ruler " 打开状态栏标尺
-set foldenable " 开始折叠
-set foldmethod=syntax " 设置语法折叠
+"set foldenable " 开始折叠
+"set foldmethod=syntax " 设置语法折叠
 set foldcolumn=0 " 设置折叠区域的宽度
 setlocal foldlevel=1 " 设置折叠层数为
 set foldclose=all " 设置为自动关闭折叠 
@@ -668,7 +668,7 @@ set nobackup                                "设置无备份文件
 "  < cSyntaxAfter 插件配置 >  
 " -----------------------------------------------------------------------------  
 " 高亮括号与运算符等  
-au! BufRead,BufNewFile,BufEnter *.{c,cpp,h,java,javascript} call CSyntaxAfter()  
+"au! BufRead,BufNewFile,BufEnter *.{c,cpp,h,java,javascript} call CSyntaxAfter()  
    
 " -----------------------------------------------------------------------------  
 "  < ctrlp.vim 插件配置 >  
@@ -936,7 +936,7 @@ if (g:iswindows && g:isGUI)
     nmap <c-down> :call Alpha_sub()<CR>  
     nmap <leader>t :call Top_window()<CR>  
 endif  
-   
+
 " =============================================================================  
 "                          << 以下为常用自动命令配置 >>  
 " =============================================================================  
@@ -992,3 +992,14 @@ filetype plugin indent on
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 "let guser_emmet_expandabbr_key = '<Tab>'  "Tab键代替<ctr+y>+,没有什么鸟用
+
+"=============
+"MarkDown
+"=============
+"let g:vim_markdown_frontmatter=1
+
+"====markdown设置==== 
+"let g:table_mode_corner=”|”
+
+"====open file in chrome browser==== 
+nnoremap <Leader> ch :update<Bar>silent ! start %:p<CR>
